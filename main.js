@@ -62,7 +62,7 @@ function call(){
     createCards(names, images);
     useQuerySelector(names)
 }
-// بتطبع الكاردس
+// بتغير الباكجروند بتاعة كل كارد
 function useQuerySelector(names){
     let cards =  document.querySelectorAll('.card')
     cards.forEach(card => {
