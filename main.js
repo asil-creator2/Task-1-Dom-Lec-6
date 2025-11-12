@@ -64,10 +64,11 @@ function call(){
 }
 // بتطبع الكاردس
 function useQuerySelector(names){
-    let all =  document.querySelectorAll('.card')
-    for (let i = 0 ; i<names.length ; i++){
-        console.log(all[i])
-    }
+    let cards =  document.querySelectorAll('.card')
+    cards.forEach(card => {
+      card.style.backgroundColor = "#bdbbbb";
+    });
+    
 }
 
 
