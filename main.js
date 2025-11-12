@@ -59,7 +59,7 @@ function createCards(names, images) {
 }
 
 // بتغير الباكجروند بتاعة كل كارد
-function useQuerySelector(names){
+function useQuerySelector(){
     let cards =  document.querySelectorAll('.card')
     cards.forEach(card => {
         card.style.backgroundColor = "#bdbbbb";
