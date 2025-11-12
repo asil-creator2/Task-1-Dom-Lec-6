@@ -1,3 +1,4 @@
+// داله بترجع ال div الاب
 function getMainElement(){
     return document.getElementById('cards');
 }
@@ -15,9 +16,10 @@ function buildCardElements(name, image) {
 
     // ال paragraph
     let paragraph = document.createElement('p');
-    paragraph.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    let p = document.createTextNode(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Vero est ducimus numquam? Magnam sunt possimus nam nobis consequatur modi, blanditiis reiciendis? 
-        Qui laudantium autem voluptatibus accusamus sunt! Nisi, perspiciatis id.`; // النص التجريبي
+        Qui laudantium autem voluptatibus accusamus sunt! Nisi, perspiciatis id.`)
+    paragraph.appendChild(p)
 
     // بنرجّع العناصر عشان نستخدمهم بعدين
     return {
@@ -55,6 +57,16 @@ function createCards(names, images) {
         container.appendChild(card);
     }
 }
+
+// بتغير الباكجروند بتاعة كل كارد
+function useQuerySelector(names){
+    let cards =  document.querySelectorAll('.card')
+    cards.forEach(card => {
+        card.style.backgroundColor = "#bdbbbb";
+    });
+    
+}
+
 // داله بتنادي 
 function call(){
     let names = ['Mohamed', 'Asil', 'Ahmed'];
@@ -62,15 +74,6 @@ function call(){
     createCards(names, images);
     useQuerySelector(names)
 }
-// بتغير الباكجروند بتاعة كل كارد
-function useQuerySelector(names){
-    let cards =  document.querySelectorAll('.card')
-    cards.forEach(card => {
-      card.style.backgroundColor = "#bdbbbb";
-    });
-    
-}
-
 
 
 call()
